@@ -3,7 +3,7 @@ USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.STD_LOGIC_ARITH.ALL;
 USE IEEE.STD_LOGIC_UNSIGNED.ALL;
 
-entity LFSR is 
+entity grain is 
  port(
   i_clk : in std_logic;
   i_rst : in std_logic;
@@ -17,9 +17,9 @@ entity LFSR is
   check_z : out std_logic_vector (63 downto 0);
   check_zi : out std_logic_vector (63 downto 0)
   );
-end LFSR;
+end grain;
 
-architecture behavior of LFSR is
+architecture behavior of grain is
  signal int_lfsr : std_logic_vector (0 to 127) := (others => '1');
  signal int_nfsr : std_logic_vector (0 to 127) := (others => '1');
  signal i_key : std_logic_vector (0 to 127) := x"000102030405060708090a0b0c0d0e0f";
